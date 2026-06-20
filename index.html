@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Father's Day ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    min-height:100vh;
+    overflow-y:auto;
+    padding:20px 10px;
+}
+
+.card{
+    background:white;
+    width:100%;
+    max-width:750px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#0077b6;
+    font-size:2.2rem;
+    margin-bottom:15px;
+}
+
+.heart{
+    font-size:45px;
+    animation:beat 1s infinite;
+    margin-bottom:20px;
+}
+
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+img{
+    width:100%;
+    max-width:280px;
+    height:auto;
+    border-radius:15px;
+    margin:20px auto;
+    display:block;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+audio{
+    width:100%;
+    margin:15px 0;
+}
+
+p{
+    color:#333;
+    line-height:1.8;
+    font-size:1rem;
+    margin-top:15px;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#0077b6;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#023e8a;
+}
+
+#surprise{
+    margin-top:20px;
+    color:#0077b6;
+    font-size:1.1rem;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:30px;
+    color:#0077b6;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+.quote{
+    margin-top:20px;
+    font-style:italic;
+    color:#555;
+}
+
+@media(max-width:600px){
+
+    .card{
+        padding:20px 15px;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    p{
+        font-size:0.95rem;
+    }
+
+    button{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>Happy Father's Day ❤️</h1>
+
+    <div class="heart">❤️</div>
+
+    <!-- Father's Image -->
+    <img src="father.jpg" alt="My Father">
+
+    <!-- Background Music -->
+    <audio controls autoplay loop id="bgMusic">
+        <source src="father-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p>
+        Dear Dad,
+        <br><br>
+
+        Thank you for being my first hero, my greatest teacher,
+        and the strongest pillar of my life.
+        Every sacrifice you made, every lesson you taught,
+        and every moment you stood beside me has shaped me into who I am today.
+
+        <br><br>
+
+        You worked hard so I could dream bigger.
+        You believed in me even when I doubted myself.
+        Your love, care, and guidance are gifts I will cherish forever.
+
+        <br><br>
+
+        No matter how old I grow,
+        I will always look up to you with love, admiration, and respect.
+
+        <br><br>
+
+        ❤️ Thank you for everything, Dad.
+        I am proud to be your child and I love you more than words can express. ❤️
+    </p>
+
+    <p class="quote">
+        “A father is someone you look up to no matter how tall you grow.”
+    </p>
+
+    <button onclick="showMessage()">
+        Click For A Special Surprise 💙
+    </button>
+
+    <div id="surprise"></div>
+
+    <div class="footer">
+        With Endless Love ❤️
+    </div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("surprise").innerHTML =
+    "🌟 Dad, you are my strength when I am weak, my guide when I am lost, and my hero every single day. Thank you for always being there for me. Happy Father's Day! 🌟";
+}
+
+// Helps music play on mobile after first tap
+document.addEventListener('click', function(){
+    let music = document.getElementById('bgMusic');
+    music.play();
+}, {once:true});
+</script>
+
+</body>
+</html>
